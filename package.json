@@ -1,0 +1,43 @@
+{
+  "name": "jest-runner-remark",
+  "version": "0.0.0-dev",
+  "description": "Jest runner to check markdown files with remark",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keplersj/jest-runner-remark.git"
+  },
+  "keywords": [
+    "jest",
+    "jest-runner",
+    "lint",
+    "remark",
+    "remark-lint",
+    "markdown",
+    "md"
+  ],
+  "author": "Kepler Sticka-Jones <kepler@stickajones.org>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keplersj/jest-runner-remark/issues"
+  },
+  "homepage": "https://github.com/keplersj/jest-runner-remark#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "create-jest-runner": "^0.5.3",
+    "remark": "^11.0.1",
+    "unified-engine": "^7.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "husky": "^3.0.4"
+  }
+}
