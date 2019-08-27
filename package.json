@@ -1,6 +1,6 @@
 {
   "name": "jest-runner-remark",
-  "version": "0.0.0-dev",
+  "version": "0.0.0-development",
   "description": "Jest runner to check markdown files with remark",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keplersj/jest-runner-remark.git"
+    "url": "https://github.com/keplersj/jest-runner-remark.git"
   },
   "keywords": [
     "jest",
@@ -41,6 +41,7 @@
     "husky": "^3.0.4",
     "jest": "^24.9.0",
     "jest-runner-prettier": "^0.3.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24"
   }
 }
