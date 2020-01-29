@@ -34,9 +34,9 @@ module.exports = ({ testPath }) => {
         streamOut: new NoOpStream(),
         streamError: new StoreStream()
       },
-      (err, code, context) => {
-        if (err) {
-          return reject(err);
+      (error, code, context) => {
+        if (error) {
+          return reject(error);
         }
 
         if (code === 0) {
