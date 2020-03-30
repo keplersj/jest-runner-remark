@@ -33,7 +33,7 @@
   "dependencies": {
     "create-jest-runner": "^0.5.3",
     "remark": "^11.0.1",
-    "unified-engine": "^7.0.0"
+    "unified-engine": "^8.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
