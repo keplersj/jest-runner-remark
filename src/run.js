@@ -32,7 +32,7 @@ module.exports = ({ testPath }) => {
         ignoreName: ".remarkignore",
         color: true,
         streamOut: new NoOpStream(),
-        streamError: new StoreStream()
+        streamError: new StoreStream(),
       },
       (error, code, context) => {
         if (error) {
@@ -46,13 +46,13 @@ module.exports = ({ testPath }) => {
             test: {
               path: testPath,
               title: "Remark",
-              errorMessage: output.toString()
-            }
+              errorMessage: output.toString(),
+            },
           });
 
           if (context.files[0].messages.length != 0) {
             result.console = [
-              { message: output.join(), origin: "", type: "warn" }
+              { message: output.join(), origin: "", type: "warn" },
             ];
           }
 
@@ -65,8 +65,8 @@ module.exports = ({ testPath }) => {
               test: {
                 path: testPath,
                 title: "Remark",
-                errorMessage: output.join()
-              }
+                errorMessage: output.join(),
+              },
             })
           );
         } else {

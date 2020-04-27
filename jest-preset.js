@@ -7,6 +7,6 @@ module.exports = {
     "<rootDir>/**/*.markdown",
     "<rootDir>/**/*.mkd",
     "<rootDir>/**/*.mkdn",
-    "<rootDir>/**/*.mkdown"
-  ]
+    "<rootDir>/**/*.mkdown",
+  ],
 };
