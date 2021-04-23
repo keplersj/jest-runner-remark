@@ -38,7 +38,7 @@
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.25.0",
     "eslint-config-starstuff": "^1.4.42",
     "husky": "^6.0.0",
     "jest": "^26.0.1",
