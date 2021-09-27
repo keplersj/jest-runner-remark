@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Remark-Lint Jest Runner good fixture matches snapshot 1`] = `
+Object {
+  "console": null,
+  "failureMessage": undefined,
+  "numFailingTests": 0,
+  "numPassingTests": 1,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "skipped": undefined,
+  "snapshot": Object {
+    "added": 0,
+    "fileDeleted": false,
+    "matched": 0,
+    "unchecked": 0,
+    "unmatched": 0,
+    "updated": 0,
+  },
+  "sourceMaps": Object {},
+  "testExecError": null,
+  "testResults": Array [
+    Object {
+      "ancestorTitles": Array [],
+      "failureMessages": Array [
+        "[4m[32msrc/__fixtures__/good.md[39m[24m: no issues found
+",
+      ],
+      "fullName": undefined,
+      "numPassingAsserts": 1,
+      "status": "failed",
+      "title": "Remark",
+    },
+  ],
+}
+`;

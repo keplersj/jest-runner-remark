@@ -1,5 +1,9 @@
-module.exports = {
+export default {
   projects: [
+    {
+      displayName: "test",
+      transform: {},
+    },
     {
       preset: "jest-runner-prettier",
       displayName: "lint:prettier",

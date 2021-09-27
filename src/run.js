@@ -1,18 +1,18 @@
-const engine = require("unified-engine");
-const remark = require("remark");
-const stream = require("stream");
-const { pass, fail } = require("create-jest-runner");
+import { engine } from "unified-engine";
+import { remark } from "remark";
+import { Writable } from "stream";
+import { pass, fail } from "create-jest-runner";
 
-class NoOpStream extends stream.Writable {
+class NoOpStream extends Writable {
   _write(chunk, enc, next) {
     next();
   }
 }
 
-module.exports = ({ testPath }) => {
+export default ({ testPath }) => {
   const output = [];
 
-  class StoreStream extends stream.Writable {
+  class StoreStream extends Writable {
     _write(chunk, enc, next) {
       output.push(chunk.toString());
       next();

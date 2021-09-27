@@ -2,9 +2,10 @@
   "name": "jest-runner-remark",
   "version": "0.0.0-development",
   "description": "Jest runner to check markdown files with remark",
+  "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,9 @@
     "jest-runner-prettier": "^0.3.6",
     "prettier": "^2.0.5",
     "semantic-release": "^17.0.7"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "eslintConfig": {
     "extends": "starstuff/auto",
