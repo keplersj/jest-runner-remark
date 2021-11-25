@@ -45,7 +45,7 @@
     "jest": "27.3.1",
     "jest-runner-eslint": "1.0.0",
     "jest-runner-prettier": "0.3.7",
-    "prettier": "2.4.1",
+    "prettier": "2.5.0",
     "semantic-release": "18.0.1"
   },
   "engines": {
