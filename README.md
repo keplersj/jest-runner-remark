@@ -1,6 +1,10 @@
 # jest-runner-remark
 
-[![npm version](https://badge.fury.io/js/jest-runner-remark.svg)](https://badge.fury.io/js/jest-runner-remark)
+[![npm](https://img.shields.io/npm/v/jest-runner-remark)](https://www.npmjs.com/package/jest-runner-remark)
+[![npm](https://img.shields.io/npm/dw/jest-runner-remark)](https://www.npmjs.com/package/jest-runner-remark)
+[![Codecov](https://img.shields.io/codecov/c/github/keplersj/jest-runner-remark)](https://app.codecov.io/gh/keplersj/jest-runner-remark)
+[![Bundle Size](https://img.shields.io/bundlephobia/min/jest-runner-remark)](https://bundlephobia.com/package/jest-runner-remark)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org/)
 
 Jest runner for Remark.
 
