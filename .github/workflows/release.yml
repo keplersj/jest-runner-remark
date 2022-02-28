@@ -1,0 +1,29 @@
+name: Release (Weekly on Tuesdays)
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 2"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - name: Install npm dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Run tests
+        env:
+          FORCE_COLOR: 1
+        run: npm test -- --ci
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release
