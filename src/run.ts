@@ -1,25 +1,30 @@
+import { TestResult } from "@jest/test-result";
 import { engine } from "unified-engine";
 import { remark } from "remark";
 import { Writable } from "stream";
 import { pass, fail } from "create-jest-runner";
 
 class NoOpStream extends Writable {
-  _write(chunk, enc, next) {
+  _write(_: any, __: any, next: Function): void {
     next();
   }
 }
 
-export default ({ testPath }) => {
-  const output = [];
+interface Parameters {
+  testPath: string;
+}
+
+export default ({ testPath }: Parameters): Promise<TestResult> => {
+  const output: string[] = [];
 
   class StoreStream extends Writable {
-    _write(chunk, enc, next) {
+    _write(chunk: any, _: any, next: Function): void {
       output.push(chunk.toString());
       next();
     }
   }
 
-  const start = new Date();
+  const start = Date.now();
   return new Promise((resolve, reject) => {
     engine(
       {
@@ -42,7 +47,7 @@ export default ({ testPath }) => {
         if (code === 0) {
           const result = pass({
             start,
-            end: new Date(),
+            end: Date.now(),
             test: {
               path: testPath,
               title: "Remark",
@@ -50,7 +55,11 @@ export default ({ testPath }) => {
             },
           });
 
-          if (context.files[0].messages.length != 0) {
+          if (
+            context &&
+            context.files &&
+            context.files[0].messages.length != 0
+          ) {
             result.console = [
               { message: output.join(), origin: "", type: "warn" },
             ];
@@ -61,7 +70,7 @@ export default ({ testPath }) => {
           return resolve(
             fail({
               start,
-              end: new Date(),
+              end: Date.now(),
               test: {
                 path: testPath,
                 title: "Remark",

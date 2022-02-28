@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   runner: "remark",
   moduleFileExtensions: ["md", "mdx", "markdown", "mkd", "mkdn", "mkdown"],
   testMatch: [

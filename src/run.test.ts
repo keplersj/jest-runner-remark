@@ -6,10 +6,10 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Remove undeterministic data from test reports
 expect.addSnapshotSerializer({
-  print: (value, serialize) => {
+  print: (value: any, serialize) => {
     delete value.perfStats;
     delete value.testFilePath;
-    value.testResults.forEach((result) => {
+    value.testResults.forEach((result: any) => {
       delete result.duration;
     });
     return serialize(value);
@@ -23,8 +23,6 @@ describe("Remark-Lint Jest Runner", () => {
     it("matches snapshot", async () => {
       const result = await run({
         testPath: join(__dirname, "__fixtures__", `good.md`),
-        config: {},
-        globalConfig: {},
       });
       return expect(result).toMatchSnapshot();
     });
