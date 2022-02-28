@@ -1,11 +1,11 @@
 import { TestResult } from "@jest/test-result";
 import { engine } from "unified-engine";
 import { remark } from "remark";
-import { Writable } from "stream";
+import { Writable } from "node:stream";
 import { pass, fail } from "create-jest-runner";
 
 class NoOpStream extends Writable {
-  _write(_: any, __: any, next: Function): void {
+  _write(_: any, __: any, next: () => void): void {
     next();
   }
 }
@@ -18,7 +18,7 @@ export default ({ testPath }: Parameters): Promise<TestResult> => {
   const output: string[] = [];
 
   class StoreStream extends Writable {
-    _write(chunk: any, _: any, next: Function): void {
+    _write(chunk: any, _: any, next: () => void): void {
       output.push(chunk.toString());
       next();
     }
@@ -58,10 +58,10 @@ export default ({ testPath }: Parameters): Promise<TestResult> => {
           if (
             context &&
             context.files &&
-            context.files[0].messages.length != 0
+            context.files[0].messages.length > 0
           ) {
             result.console = [
-              { message: output.join(), origin: "", type: "warn" },
+              { message: output.join(""), origin: "", type: "warn" },
             ];
           }
 
@@ -74,7 +74,7 @@ export default ({ testPath }: Parameters): Promise<TestResult> => {
               test: {
                 path: testPath,
                 title: "Remark",
-                errorMessage: output.join(),
+                errorMessage: output.join(""),
               },
             })
           );
