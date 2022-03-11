@@ -2,7 +2,7 @@ import { TestResult } from "@jest/test-result";
 import { engine } from "unified-engine";
 import { remark } from "remark";
 import { Writable } from "node:stream";
-import { pass, fail } from "create-jest-runner";
+import { pass, fail } from "create-lite-jest-runner";
 
 class NoOpStream extends Writable {
   _write(_: any, __: any, next: () => void): void {

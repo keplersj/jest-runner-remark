@@ -2,35 +2,42 @@
 
 exports[`Remark-Lint Jest Runner good fixture matches snapshot 1`] = `
 Object {
-  "console": null,
+  "console": undefined,
+  "coverage": undefined,
+  "displayName": undefined,
   "failureMessage": undefined,
+  "leaks": false,
+  "memoryUsage": undefined,
   "numFailingTests": 0,
   "numPassingTests": 1,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "skipped": undefined,
+  "openHandles": Array [],
+  "skipped": false,
   "snapshot": Object {
     "added": 0,
     "fileDeleted": false,
     "matched": 0,
     "unchecked": 0,
+    "uncheckedKeys": Array [],
     "unmatched": 0,
     "updated": 0,
   },
-  "sourceMaps": Object {},
-  "testExecError": null,
+  "testExecError": undefined,
   "testResults": Array [
     Object {
       "ancestorTitles": Array [],
+      "failureDetails": Array [],
       "failureMessages": Array [
         "[4m[32msrc/__fixtures__/good.md[39m[24m: no issues found
 ",
       ],
-      "fullName": undefined,
+      "fullName": "",
       "numPassingAsserts": 1,
-      "status": "failed",
+      "status": "passed",
       "title": "Remark",
     },
   ],
+  "v8Coverage": undefined,
 }
 `;
