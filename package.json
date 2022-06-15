@@ -39,7 +39,7 @@
   "dependencies": {
     "create-lite-jest-runner": "^1.1.0",
     "remark": "^14.0.2",
-    "unified-engine": "^9.0.5"
+    "unified-engine": "^10.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.2",
