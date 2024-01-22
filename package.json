@@ -42,8 +42,8 @@
     "unified-engine": "^10.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.4.4",
-    "@commitlint/config-conventional": "18.4.4",
+    "@commitlint/cli": "18.5.0",
+    "@commitlint/config-conventional": "18.5.0",
     "@types/jest": "27.5.2",
     "eslint": "8.56.0",
     "eslint-config-starstuff": "1.5.57",
