@@ -49,7 +49,7 @@
     "eslint-config-starstuff": "1.5.63",
     "husky": "9.0.11",
     "jest": "27.5.1",
-    "jest-runner-eslint": "2.1.2",
+    "jest-runner-eslint": "2.2.0",
     "jest-runner-prettier": "1.0.0",
     "prettier": "2.8.8",
     "ts-jest": "27.1.5",
