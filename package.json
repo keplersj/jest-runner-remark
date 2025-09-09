@@ -46,7 +46,7 @@
     "@commitlint/config-conventional": "19.8.1",
     "@types/jest": "27.5.2",
     "eslint": "8.57.1",
-    "eslint-config-starstuff": "1.5.67",
+    "eslint-config-starstuff": "1.5.132",
     "husky": "9.1.7",
     "jest": "27.5.1",
     "jest-runner-eslint": "2.3.0",
